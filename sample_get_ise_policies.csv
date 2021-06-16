@@ -1,0 +1,15 @@
+﻿Policy ID,Policy Name,Source SGT Name,Source SGT Value,Destination SGT Name,Destination SGT Value,Status,Contract Name,Contract Description,ACEs
+92c1a900-8c01-11e6-996c-525400b48521,ANY-ANY,ANY,65535,ANY,65535,ENABLED,Permit IP,Permit IP SGACL,permit ip
+fd46e261-ccff-11eb-b357-62875979152a,Developers-Group1_Type2,Developers,8,Group1_Type2,19,DISABLED,AllowDHCPDNS,Sample contract to allow DHCP and DNS,"permit udp dst eq 67
+permit udp dst eq 68
+permit tcp dst eq 53
+permit tcp dst eq 5353
+permit udp dst eq 53
+permit udp dst eq 5353
+deny ip"
+90cabfd1-ccdc-11eb-b357-62875979152a,Group1_Type1-Group1_Type2,Group1_Type1,18,Group1_Type2,19,ENABLED,AllowWeb,Sample contract to allow access to Web,"permit tcp dst eq 80
+permit tcp dst eq 443
+permit udp dst eq 443
+deny ip"
+ec487371-ccff-11eb-b357-62875979152a,Group1_Type1-Network_Services,Group1_Type1,18,Network_Services,3,ENABLED,Deny IP,Deny IP SGACL,deny ip
+f42ae231-ccff-11eb-b357-62875979152a,Group1_Type2-Extranet,Group1_Type2,19,Extranet,17,MONITOR,Deny IP,Deny IP SGACL,deny ip
